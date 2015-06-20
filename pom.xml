@@ -13,8 +13,8 @@
   <version>2.0-SNAPSHOT</version>
 
   <properties>
-    <marketplace.datadog.version>1.0-SNAPSHOT</marketplace.datadog.version>
-    <nuxeo.distribution.version>6.0</nuxeo.distribution.version>
+    <marketplace.datadog.version>2.0-SNAPSHOT</marketplace.datadog.version>
+    <nuxeo.distribution.version>7.3-SNAPSHOT</nuxeo.distribution.version>
   </properties>
 
   <modules>
