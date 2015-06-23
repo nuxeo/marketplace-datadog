@@ -10,10 +10,10 @@
   <artifactId>parent</artifactId>
   <packaging>pom</packaging>
   <name>Nuxeo Datadog Reporter package</name>
-  <version>1.0-SNAPSHOT</version>
+  <version>6.0-HF15-SNAPSHOT</version>
 
   <properties>
-    <marketplace.datadog.version>1.0-SNAPSHOT</marketplace.datadog.version>
+    <marketplace.datadog.version>6.0-HF15-SNAPSHOT</marketplace.datadog.version>
     <nuxeo.distribution.version>6.0-HF15-SNAPSHOT</nuxeo.distribution.version>
   </properties>
 
