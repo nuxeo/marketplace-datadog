@@ -55,6 +55,11 @@
         <includes>
           <artifact groupId="org.nuxeo*" scope="!test" type="!pom" />
         </includes>
+        <excludes>
+          <artifact artifactId="nuxeo-core-storage-sql-extensions" />
+          <artifact artifactId="nuxeo-wss-front" />
+
+        </excludes>
       </artifact:set>
     </copy>
     <!-- Third-party libraries -->
