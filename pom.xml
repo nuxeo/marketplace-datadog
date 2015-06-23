@@ -3,18 +3,18 @@
   <parent>
     <groupId>org.nuxeo.ecm.distribution</groupId>
     <artifactId>nuxeo-distribution</artifactId>
-    <version>6.0-HF15-SNAPSHOT</version>
+    <version>6.0-HF14</version>
   </parent>
 
   <groupId>org.nuxeo.marketplace.datadog</groupId>
   <artifactId>parent</artifactId>
   <packaging>pom</packaging>
   <name>Nuxeo Datadog Reporter package</name>
-  <version>1.0-SNAPSHOT</version>
+  <version>6.0-HF14</version>
 
   <properties>
-    <marketplace.datadog.version>1.0-SNAPSHOT</marketplace.datadog.version>
-    <nuxeo.distribution.version>6.0-HF15-SNAPSHOT</nuxeo.distribution.version>
+    <marketplace.datadog.version>6.0-HF14</marketplace.datadog.version>
+    <nuxeo.distribution.version>6.0-HF14</nuxeo.distribution.version>
   </properties>
 
   <modules>
