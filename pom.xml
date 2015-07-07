@@ -3,7 +3,7 @@
   <parent>
     <groupId>org.nuxeo.ecm.distribution</groupId>
     <artifactId>nuxeo-distribution</artifactId>
-    <version>7.3-SNAPSHOT</version>
+    <version>7.4-SNAPSHOT</version>
   </parent>
 
   <groupId>org.nuxeo.marketplace.datadog</groupId>
@@ -14,7 +14,7 @@
 
   <properties>
     <marketplace.datadog.version>2.0-SNAPSHOT</marketplace.datadog.version>
-    <nuxeo.distribution.version>7.3-SNAPSHOT</nuxeo.distribution.version>
+    <nuxeo.distribution.version>7.4-SNAPSHOT</nuxeo.distribution.version>
   </properties>
 
   <modules>
@@ -72,12 +72,12 @@
   </repositories>
 
   <scm>
-    <connection>scm:git:git://github.com/nuxeo/nuxeo-marketplace-box-api.git
+    <connection>scm:git:git://github.com/nuxeo/marketplace-datadog.git
     </connection>
     <developerConnection>
-      scm:git:ssh://git@github.com:nuxeo/nuxeo-marketplace-box-api.git
+      scm:git:ssh://git@github.com:nuxeo/marketplace-datadog.git
     </developerConnection>
-    <url>https://github.com/nuxeo/nuxeo-marketplace-box-api</url>
+    <url>https://github.com/nuxeo/marketplace-datadog</url>
   </scm>
 
 </project>
