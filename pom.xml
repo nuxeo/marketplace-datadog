@@ -10,10 +10,10 @@
   <artifactId>parent</artifactId>
   <packaging>pom</packaging>
   <name>Nuxeo Datadog Reporter package</name>
-  <version>6.0-HF15-SNAPSHOT</version>
+  <version>1.0-SNAPSHOT</version>
 
   <properties>
-    <marketplace.datadog.version>2.0-SNAPSHOT</marketplace.datadog.version>
+    <marketplace.datadog.version>1.0-SNAPSHOT</marketplace.datadog.version>
     <nuxeo.base.version>6.0</nuxeo.base.version>
     <nuxeo.distribution.version>${nuxeo.base.version}-HF15-SNAPSHOT</nuxeo.distribution.version>
   </properties>
@@ -41,7 +41,7 @@
       </dependency>
       <dependency>
         <groupId>org.nuxeo.marketplace.datadog</groupId>
-        <artifactId>marketplace-datatdog-reporter</artifactId>
+        <artifactId>marketplace-datadog-reporter</artifactId>
         <version>${marketplace.datadog.version}</version>
         <type>zip</type>
       </dependency>
