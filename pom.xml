@@ -13,8 +13,9 @@
   <version>6.0-HF15-SNAPSHOT</version>
 
   <properties>
-    <marketplace.datadog.version>6.0-HF15-SNAPSHOT</marketplace.datadog.version>
-    <nuxeo.distribution.version>6.0-HF15-SNAPSHOT</nuxeo.distribution.version>
+    <marketplace.datadog.version>2.0-SNAPSHOT</marketplace.datadog.version>
+    <nuxeo.base.version>6.0</nuxeo.base.version>
+    <nuxeo.distribution.version>${nuxeo.base.version}-HF15-SNAPSHOT</nuxeo.distribution.version>
   </properties>
 
   <modules>
