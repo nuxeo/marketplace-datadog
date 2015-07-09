@@ -11,5 +11,8 @@ nuxeo.template.includes=common
 # No default setup, should be set in nuxeo.conf
 # datadog.host=
 
+# List of tags to add to those metrics, separated by commas
+datadog.tags=nuxeo
+
 # Interval in second for reports to be sent to Datadog
 datadog.pollinterval=10
