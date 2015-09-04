@@ -1,7 +1,6 @@
 <project name="nuxeo-datadog-tests" xmlns:artifact="urn:nuxeo-artifact">
   <taskdef resource="org/nuxeo/build/antlib.xml" uri="urn:nuxeo-build" />
-  <taskdef resource="org/nuxeo/build/artifact/antlib.xml"
-           uri="urn:nuxeo-artifact" />
+  <taskdef resource="org/nuxeo/build/artifact/antlib.xml" uri="urn:nuxeo-artifact" />
   <taskdef resource="net/sf/antcontrib/antlib.xml" />
 
   <property name="out.dir" value="${maven.project.build.directory}" />
@@ -10,10 +9,8 @@
   </unzip>
   <import file="${out.dir}/nuxeo-ftest.xml" />
 
-  <property name="mp.install"
-            value="file:${out.dir}/marketplace-datadog-reporter-${marketplace.datadog.version}.zip" />
-  <target name="prepare-environment"
-          depends="_init,prepare-db,prepare-tomcat,prepare-jboss">
+  <property name="mp.install" value="file:${out.dir}/marketplace-datadog-reporter-${marketplace.datadog.version}.zip" />
+  <target name="prepare-environment" depends="_init,prepare-db,prepare-tomcat,prepare-jboss">
     <copy todir="${out.dir}">
       <artifact:resolveFile key="org.nuxeo.marketplace.datadog:marketplace-datadog-reporter::zip" />
     </copy>

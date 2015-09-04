@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.nuxeo.ecm.distribution</groupId>
@@ -15,7 +16,6 @@
   <properties>
     <marketplace.datadog.version>2.1-SNAPSHOT</marketplace.datadog.version>
     <nuxeo.base.version>7.4</nuxeo.base.version>
-    <nuxeo.distribution.version>${nuxeo.base.version}-SNAPSHOT</nuxeo.distribution.version>
   </properties>
 
   <modules>
@@ -44,6 +44,13 @@
         <artifactId>marketplace-datadog-reporter</artifactId>
         <version>${marketplace.datadog.version}</version>
         <type>zip</type>
+      </dependency>
+
+      <!-- TODO remove once referenced in addons/pom.xml -->
+      <dependency>
+        <groupId>org.nuxeo.datadog</groupId>
+        <artifactId>nuxeo-datadog-reporter</artifactId>
+        <version>${nuxeo.distribution.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
