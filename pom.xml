@@ -13,11 +13,6 @@
   <name>Nuxeo Datadog Reporter package</name>
   <version>2.0.1-SNAPSHOT</version>
 
-  <properties>
-    <marketplace.datadog.version>2.0.1-SNAPSHOT</marketplace.datadog.version>
-    <nuxeo.base.version>7.4</nuxeo.base.version>
-  </properties>
-
   <modules>
     <module>marketplace</module>
   </modules>
@@ -36,21 +31,14 @@
       <dependency>
         <groupId>org.nuxeo.marketplace.datadog</groupId>
         <artifactId>nxr</artifactId>
-        <version>${marketplace.datadog.version}</version>
+        <version>${project.version}</version>
         <type>zip</type>
       </dependency>
       <dependency>
         <groupId>org.nuxeo.marketplace.datadog</groupId>
         <artifactId>marketplace-datadog-reporter</artifactId>
-        <version>${marketplace.datadog.version}</version>
+        <version>${project.version}</version>
         <type>zip</type>
-      </dependency>
-
-      <!-- TODO remove once referenced in addons/pom.xml -->
-      <dependency>
-        <groupId>org.nuxeo.datadog</groupId>
-        <artifactId>nuxeo-datadog-reporter</artifactId>
-        <version>${nuxeo.distribution.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -80,11 +68,8 @@
   </repositories>
 
   <scm>
-    <connection>scm:git:git://github.com/nuxeo/marketplace-datadog.git
-    </connection>
-    <developerConnection>
-      scm:git:ssh://git@github.com:nuxeo/marketplace-datadog.git
-    </developerConnection>
+    <connection>scm:git:git://github.com/nuxeo/marketplace-datadog.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com:nuxeo/marketplace-datadog.git</developerConnection>
     <url>https://github.com/nuxeo/marketplace-datadog</url>
   </scm>
 
