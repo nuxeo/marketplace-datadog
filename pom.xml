@@ -1,9 +1,10 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.nuxeo.ecm.distribution</groupId>
     <artifactId>nuxeo-distribution</artifactId>
-    <version>6.0-HF16-SNAPSHOT</version>
+    <version>6.0-HF22-SNAPSHOT</version>
   </parent>
 
   <groupId>org.nuxeo.marketplace.datadog</groupId>
@@ -11,12 +12,6 @@
   <packaging>pom</packaging>
   <name>Nuxeo Datadog Reporter package</name>
   <version>1.0.1-SNAPSHOT</version>
-
-  <properties>
-    <marketplace.datadog.version>1.1-SNAPSHOT</marketplace.datadog.version>
-    <nuxeo.base.version>6.0</nuxeo.base.version>
-    <nuxeo.distribution.version>${nuxeo.base.version}-HF16-SNAPSHOT</nuxeo.distribution.version>
-  </properties>
 
   <modules>
     <module>marketplace</module>
@@ -36,13 +31,13 @@
       <dependency>
         <groupId>org.nuxeo.marketplace.datadog</groupId>
         <artifactId>nxr</artifactId>
-        <version>${marketplace.datadog.version}</version>
+        <version>${project.version}</version>
         <type>zip</type>
       </dependency>
       <dependency>
         <groupId>org.nuxeo.marketplace.datadog</groupId>
         <artifactId>marketplace-datadog-reporter</artifactId>
-        <version>${marketplace.datadog.version}</version>
+        <version>${project.version}</version>
         <type>zip</type>
       </dependency>
     </dependencies>
@@ -73,12 +68,9 @@
   </repositories>
 
   <scm>
-    <connection>scm:git:git://github.com/nuxeo/nuxeo-marketplace-box-api.git
-    </connection>
-    <developerConnection>
-      scm:git:ssh://git@github.com:nuxeo/nuxeo-marketplace-box-api.git
-    </developerConnection>
-    <url>https://github.com/nuxeo/nuxeo-marketplace-box-api</url>
+    <connection>scm:git:git://github.com/nuxeo/marketplace-datadog.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com:nuxeo/marketplace-datadog.git</developerConnection>
+    <url>https://github.com/nuxeo/marketplace-datadog</url>
   </scm>
 
 </project>

@@ -1,10 +1,6 @@
-<project name="datadog-assembly"
-         default="build"
-         xmlns:nx="urn:nuxeo-build"
-         xmlns:artifact="urn:nuxeo-artifact">
+<project name="datadog-assembly" default="build" xmlns:nx="urn:nuxeo-build" xmlns:artifact="urn:nuxeo-artifact">
   <taskdef resource="org/nuxeo/build/antlib.xml" uri="urn:nuxeo-build" />
-  <taskdef resource="org/nuxeo/build/artifact/antlib.xml"
-           uri="urn:nuxeo-artifact" />
+  <taskdef resource="org/nuxeo/build/artifact/antlib.xml" uri="urn:nuxeo-artifact" />
   <taskdef resource="net/sf/antcontrib/antlib.xml" />
 
   <target name="init" unless="init.done">
@@ -16,17 +12,12 @@
 
   <target name="expand">
     <artifact:nuxeo-expand includeTestScope="true" groupPrefixes="org.nuxeo" />
-    <artifact:print output="${outdir}/artifacts-datadog.properties"
-                    mode="sdk" />
-    <artifact:print output="${outdir}/test-artifacts-datadog.properties"
-                    mode="sdk"
-                    scopes="test" />
+    <artifact:print output="${outdir}/artifacts-datadog.properties" mode="sdk" />
+    <artifact:print output="${outdir}/test-artifacts-datadog.properties" mode="sdk" scopes="test" />
     <artifact:print output="${outdir}/dependency-tree.log" />
   </target>
 
-  <target name="build"
-          depends="init"
-          description="Build Datadog reporter Marketplace package">
+  <target name="build" depends="init" description="Build Datadog reporter Marketplace package">
     <tstamp />
     <delete failonerror="false" dir="${outdir}/nxr" />
     <mkdir dir="${outdir}/nxr" />
@@ -35,14 +26,12 @@
     <copy todir="${outdir}/marketplace">
       <fileset dir="src/main/resources" />
       <filterset>
-        <filter token="VERSION" value="${marketplace.datadog.version}" />
-        <filter token="DISTRIB_VERSION" value="${nuxeo.base.version}" />
+        <filter token="VERSION" value="${maven.project.version}" />
+        <filter token="DISTRIB_VERSION" value="${nuxeo.distribution.version}" />
       </filterset>
     </copy>
-    <copy file="${outdir}/artifacts-datadog.properties"
-          todir="${outdir}/marketplace/install" />
-    <copy file="${outdir}/test-artifacts-datadog.properties"
-          todir="${outdir}/marketplace/install" />
+    <copy file="${outdir}/artifacts-datadog.properties" todir="${outdir}/marketplace/install" />
+    <copy file="${outdir}/test-artifacts-datadog.properties" todir="${outdir}/marketplace/install" />
 
     <!-- Base distribution NXR -->
     <copy todir="${outdir}">
@@ -78,19 +67,17 @@
     </move>
     <nx:rmdups dir="${outdir}/nxr/lib" />
     <!-- Temporary ZIP Nuxeo NXR to compare with base distribution NXR -->
-    <zip destfile="${outdir}/nxr-${marketplace.datadog.version}.zip"
-         basedir="${outdir}/nxr" />
+    <zip destfile="${outdir}/nxr-${maven.project.version}.zip" basedir="${outdir}/nxr" />
 
     <!-- Your MP only needs to include files not already provided by the base distribution -->
-    <nx:zipdiff file1="${outdir}/nxr-${marketplace.datadog.version}.zip"
+    <nx:zipdiff file1="${outdir}/nxr-${maven.project.version}.zip"
                 file2="${outdir}/nuxeo-distribution-cap-${nuxeo.distribution.version}.zip"
                 includesfile="${outdir}/includes"
                 excludesfile="${outdir}/excludesfile"
                 patternsetid="datadog.versus.cap"
                 ignoreContentPattern=".*\.jar$">
     </nx:zipdiff>
-    <unzip src="${outdir}/nxr-${marketplace.datadog.version}.zip"
-           dest="${outdir}/marketplace/install">
+    <unzip src="${outdir}/nxr-${maven.project.version}.zip" dest="${outdir}/marketplace/install">
       <patternset refid="datadog.versus.cap" />
     </unzip>
 
@@ -135,9 +122,7 @@
       </then>
     </if>
 
-    <copy file="src/main/resources/install.xml"
-          todir="${outdir}/marketplace"
-          overwrite="true">
+    <copy file="src/main/resources/install.xml" todir="${outdir}/marketplace" overwrite="true">
       <filterset>
         <filter token="BUNDLES" value="${install.bundles}" />
         <filter token="LIBS" value="${install.libs}" />
@@ -146,10 +131,9 @@
       </filterset>
     </copy>
 
-    <zip destfile="${outdir}/${maven.project.artifactId}-${marketplace.datadog.version}.zip"
+    <zip destfile="${outdir}/${maven.project.artifactId}-${maven.project.version}.zip"
          basedir="${outdir}/marketplace" />
-    <artifact:attach file="${outdir}/${maven.project.artifactId}-${marketplace.datadog.version}.zip"
-                     type="zip" />
+    <artifact:attach file="${outdir}/${maven.project.artifactId}-${maven.project.version}.zip" type="zip" />
   </target>
 
 </project>
