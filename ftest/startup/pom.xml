@@ -7,9 +7,9 @@
     <relativePath>../../pom.xml</relativePath>
   </parent>
 
-  <artifactId>webdriver</artifactId>
-  <name>Nuxeo Datadog functional tests with WebDriver</name>
-  <description>Nuxeo Datadog functional tests with WebDriver</description>
+  <artifactId>startup</artifactId>
+  <name>Nuxeo Datadog Startup tests</name>
+  <description>Nuxeo Datadog Startup tests</description>
 
   <properties>
     <some.password>setTheValueInYourSettings</some.password>
@@ -42,8 +42,7 @@
     </dependency>
     <dependency>
       <groupId>org.nuxeo.ecm.distribution</groupId>
-      <artifactId>nuxeo-distribution-tomcat</artifactId>
-      <classifier>nuxeo-cap</classifier>
+      <artifactId>nuxeo-server-tomcat</artifactId>
       <type>zip</type>
       <scope>test</scope>
     </dependency>
