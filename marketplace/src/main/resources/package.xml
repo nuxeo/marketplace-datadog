@@ -2,7 +2,7 @@
 <package type="addon" name="nuxeo-datadog-reporter" version="@VERSION@">
   <title>Nuxeo Datadog reporter</title>
   <description>
-    <p>This addon allows to send metrics report to Datadog.</p>
+    <p>The Nuxeo Datadog Reporter addon allows to report all the Nuxeo server metrics to Datadog, a SaaS platform to monitor your applications.</p>
   </description>
   <home-page>http://github.com/nuxeo/nuxeo-datadog-reporter</home-page>
   <vendor>Nuxeo</vendor>
