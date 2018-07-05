@@ -3,7 +3,7 @@
   <parent>
     <groupId>org.nuxeo.marketplace.datadog</groupId>
     <artifactId>parent</artifactId>
-    <version>2.3.1-SNAPSHOT</version>
+    <version>2.3.1-I20180705_0412</version>
     <relativePath>../../pom.xml</relativePath>
   </parent>
 
